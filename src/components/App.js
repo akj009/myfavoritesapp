@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import FavList from "./FavList";
 
 class App extends Component {
 
     render() {
-        return <div />;
+        return <div>
+            <FavList/>
+        </div>;
     }
 }
 
