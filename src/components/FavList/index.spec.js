@@ -9,4 +9,8 @@ describe('FavList', () => {
     it('should render a <div />', () => {
         expect(wrapper.find('div').length).toEqual(1);
     });
+
+    it('should contain a table', () => {
+        expect(wrapper.find('table').length).toEqual(1);
+    });
 });
