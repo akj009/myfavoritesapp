@@ -13,4 +13,13 @@ describe('FavList', () => {
     it('should contain a table', () => {
         expect(wrapper.find('table').length).toEqual(1);
     });
+
+    it('should render a single row', () => {
+        wrapper.setProps({elementList: [{name: 'Avatar'}]});
+        expect(wrapper.find('tbody').find('tr').length).toEqual(1);
+    });
+
+    it('should not render any row', () => {
+        expect(wrapper.find('tbody').find('tr').length).toEqual(0);
+    });
 });
