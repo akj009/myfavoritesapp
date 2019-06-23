@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import listReducer from './listReducer';
+import {listReducer} from './listReducer';
 
 const rootReducer = combineReducers({
     list: listReducer,
