@@ -145,11 +145,6 @@ describe('reducers rating items', () => {
             }
         })).toEqual([
             {
-                id: 2,
-                name: "Oceans",
-                score: 5
-            },
-            {
                 id: 0,
                 name: "Avengers",
                 score: 0
@@ -164,6 +159,11 @@ describe('reducers rating items', () => {
                 name: "Godfather",
                 score: 0
             },
+            {
+                id: 2,
+                name: "Oceans",
+                score: 5
+            }
         ])
     });
     it('should sort existing items based on rating', () => {
