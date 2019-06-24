@@ -12,7 +12,7 @@ export class App extends Component {
     }
 
     render() {
-        return <div>
+        return <div className="mdl-grid">
             <FavList elementList={this.props.list}/>
             <RatingForm/>
             <RandomizeButton/>

@@ -34,12 +34,19 @@ export class RandomizeButton extends Component {
     };
 
     render () {
-        return (<section>
-            <h3>Randomize List</h3>
-            <button onClick={this.startTimer}>Start</button>
-            <button onClick={this.stopTimer}>End</button>
-            <h4>Randomizing list in {Math.ceil(this.state.duration)}ms </h4>
-        </section>);
+        return (
+        <div  className="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div className="mdl-card__title">
+                <h3>Randomize List</h3>
+            </div>
+            <div className="mdl-card__supporting-text">
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick={this.startTimer}>Start</button>
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick={this.stopTimer}>End</button>
+            </div>
+            <div className="mdl-card__actions mdl-card--border">
+                <h4>Randomizing list in {Math.ceil(this.state.duration)}ms </h4>
+            </div>
+        </div>);
     }
 }
 
