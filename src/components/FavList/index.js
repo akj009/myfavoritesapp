@@ -12,15 +12,15 @@ const FavList = ({elementList}) => {
                 </tr>
             </thead>
             <tbody>
-            {elementList && elementList.map(
+            {elementList && elementList.length > 0 ? elementList.map(
                 element => (
                     <tr key={element.name}>
                         <td>{counter++}</td>
                         <td>{element.name}</td>
-                        <td>{element.rating}</td>
+                        <td>{element.score}</td>
                     </tr>
                 )
-            )}
+            ) : (<tr><td colSpan={3}>"loading list"</td></tr>)}
             </tbody>
         </table>
     </div>);

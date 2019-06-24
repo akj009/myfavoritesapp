@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FavList from './index';
+import FavList from '../FavList';
 
 describe('FavList', () => {
     let wrapper;
@@ -19,7 +19,7 @@ describe('FavList', () => {
         expect(wrapper.find('tbody').find('tr').length).toEqual(1);
     });
 
-    it('should not render any row', () => {
-        expect(wrapper.find('tbody').find('tr').length).toEqual(0);
+    it('should render loading row', () => {
+        expect(wrapper.find('tbody').find('tr').length).toEqual(1);
     });
 });
