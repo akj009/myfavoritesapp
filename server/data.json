@@ -1,0 +1,25 @@
+{
+  "movies": [
+    "Avengers",
+    "Avatar",
+    "Oceans",
+    "Transporter",
+    "3 Idiots",
+    "Piku",
+    "Border",
+    "Independence Day",
+    "Matrix",
+    "Rang De Basanti"
+  ],
+  "books": [
+    "God Father",
+    "Digital Fortress",
+    "Gita",
+    "Full Metal Alchemist",
+    "Head first Java",
+    "Spring In Action"
+  ],
+  "food": [
+
+  ]
+}
