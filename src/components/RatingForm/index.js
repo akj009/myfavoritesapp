@@ -15,7 +15,6 @@ export class RatingForm extends Component {
     };
 
     submitRating = () => {
-        console.log(this.state);
         this.props.submitRating(this.state);
     };
 
@@ -29,11 +28,14 @@ export class RatingForm extends Component {
                 <div className="mdl-card__supporting-text">
                     <div className="mdl-textfield mdl-js-textfield">
                         <h6>Select name</h6>
-                        <select id="name" className="mdl-textfield__input" name="name" onChange={this.handleChange}>{
+                        <select id="name" className="mdl-textfield__input" name="name" onChange={this.handleChange}>
+                            <option value="" disabled selected>------</option>
+                            {
                             list && list.length && list.map(rating => {
                                 return (<option key={rating.name} value={rating.name}>{rating.name}</option>)
                             })
-                        }</select>
+                            }
+                        </select>
                     </div>
                     <div className="mdl-textfield mdl-js-textfield">
                         <h6>Select score</h6>
