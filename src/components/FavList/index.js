@@ -3,12 +3,13 @@ import React from 'react';
 const FavList = ({elementList}) => {
     let counter = 1;
     return (<div>
+        <h3>My Favorites List</h3>
         <table>
             <thead>
                 <tr>
-                    <td>S.no.</td>
-                    <td>Name</td>
-                    <td>Rating</td>
+                    <th>S.no.</th>
+                    <th align="left">Name</th>
+                    <th>Rating</th>
                 </tr>
             </thead>
             <tbody>

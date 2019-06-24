@@ -49,7 +49,6 @@ const sortList = () => {
 };
 
 const updateRatingByIdx = (ratingWithId) => {
-    console.log(ratingWithId);
     return {
         type : types.UPDATE_RATING_BY_ID,
         ratingWithId

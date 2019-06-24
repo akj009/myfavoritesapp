@@ -23,7 +23,7 @@ export class RatingForm extends Component {
         let {list} = this.props;
         return (
             <div>
-                <label>Rating item </label>
+                <h3>Rating item </h3>
                 <select name="name" onChange={this.handleChange}>{
                     list && list.length && list.map(rating => {
                         return (<option key={rating.name} value={rating.name}>{rating.name}</option>)

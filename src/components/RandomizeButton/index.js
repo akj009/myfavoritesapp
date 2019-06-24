@@ -6,7 +6,7 @@ import {updateRatingByIndex} from "../../store/actions/listActions";
 export class RandomizeButton extends Component {
 
     state = {
-        duration: 0,
+        duration: -1,
         score: 0,
         index: 0
     };
