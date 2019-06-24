@@ -29,10 +29,16 @@ export const listReducer = (state = initialState, action) => {
                     otherElements.push(Object.assign({}, state[stateKey]));
                 }
             }
-            return [mutableElement, ...otherElements];
+            return [...otherElements, mutableElement];
         case types.SORT_LIST_ON_RATINGS:
             let sortedState = [...state];
             return sortedState.sort(scoreComparator);
+        case types.UPDATE_RATING_BY_ID:
+            let {ratingWithId} = action;
+            let mutatedElement = Object.assign({}, state[ratingWithId.index], {score: ratingWithId.score});
+            let mutatedState = [...state];
+            mutatedState[ratingWithId.index] = mutatedElement;
+            return mutatedState;
         default: return state;
     }
 };

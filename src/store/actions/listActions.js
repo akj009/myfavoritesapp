@@ -47,3 +47,18 @@ const sortList = () => {
         type: types.SORT_LIST_ON_RATINGS
     };
 };
+
+const updateRatingByIdx = (ratingWithId) => {
+    console.log(ratingWithId);
+    return {
+        type : types.UPDATE_RATING_BY_ID,
+        ratingWithId
+    }
+};
+
+export const updateRatingByIndex = (ratingWithId) => {
+    return (dispatch) => {
+        dispatch(updateRatingByIdx(ratingWithId));
+        dispatch(sortList());
+    }
+};
